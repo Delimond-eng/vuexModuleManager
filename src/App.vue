@@ -8,6 +8,9 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  mounted () {
+    this.$store.dispatch('user/testNested');
+  },
   components: {
     HelloWorld
   }
