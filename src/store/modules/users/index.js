@@ -2,9 +2,9 @@ import userModule from "./conf/user_module";
 
 const user ={
     namespaced: true,
-    state: states,
-    getters:getters,
-    actions:actions,
-    mutations:mutations
+    state: userModule.states,
+    getters:userModule.getters,
+    actions:userModule.actions,
+    mutations:userModule.setters
 }
 export default user;
