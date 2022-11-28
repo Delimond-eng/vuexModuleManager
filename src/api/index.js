@@ -1,19 +1,23 @@
-const data = require('./data');
-import http from '@/http'
-export function getAllUsers (exec) {
+const data = require("./data");
+import http from "@/http";
+const api = {
+  getAllUsers: function (exec) {
     setTimeout(() => {
-      exec(data)
-    }, 16)
-}
+      exec(data);
+    }, 16);
+  },
 
-export function fetchPosts(exec){
-  http.get('posts').then(post =>{
-    exec(post);
-  });
-}
+  fetchPosts: function (exec) {
+    http.get("posts").then((post) => {
+      exec(post);
+    });
+  },
 
-export function postData(data, exec){
-  http.post('posts',data, {}).then(post=>{
-    exec(post);
-  });
-}
+  postData: function (data, exec) {
+    http.post("posts", data).then((post) => {
+      exec(post);
+    });
+  },
+};
+
+export default api;

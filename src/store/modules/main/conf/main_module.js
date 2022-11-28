@@ -14,7 +14,7 @@ const mutations={
     }
 }
 
-import * as api from '@/api'
+import api from '@/api'
 const actions={
     async viewAllUsers({commit}){
        api.getAllUsers(users=>{
