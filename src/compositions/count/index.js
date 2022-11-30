@@ -14,12 +14,19 @@ const count = {
 
   userAutoCounter() {
     const n = ref(0);
+    let t = null;
     onMounted(() => {
-      window.setInterval(() => {
+      t = window.setInterval(() => {
         n.value++;
       }, 1000);
     });
-    return { n };
+    const stopCounter = function () {
+      if (t !== null) {
+        window.clearInterval(t);
+        t = null;
+      }
+    };
+    return { n, stopCounter };
   },
 };
 

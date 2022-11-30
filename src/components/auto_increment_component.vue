@@ -2,13 +2,17 @@
     <div>
 
         <p>Classic counter</p>
-        <h1>{{ count }}</h1>
+        <h1>{{ counter.count }}</h1>
         <br>
-        <button @click="increment">Increment</button>
-        <button @click="decrement">Decrement</button>
+        <button @click="counter.decrement">Decrement</button>
+        <button @click="counter.increment">Increment</button>
+
 
         <p>Auto counter</p>
-        <h1>{{  auto  }}</h1>
+        <h1>{{ auto.n }}</h1>
+        <button @click="auto.stopCounter">
+            Stop counter
+        </button>
     </div>
 </template>
 
@@ -18,8 +22,18 @@ export default {
     name: 'auto_increment_component',
     setup(props) {
         const { count, increment, decrement } = compositions.count.useCounter();
-        const { auto } = compositions.count.userAutoCounter();
-        return { count, increment, decrement, auto };
+        const { n, stopCounter } = compositions.count.userAutoCounter();
+        return {
+
+            counter: {
+                count, increment, decrement,
+            },
+            auto: {
+                stopCounter, n,
+            }
+
+
+        };
     }
 }
 </script>
