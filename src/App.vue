@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <auto-increment />
+  <auto-increment label="Hello Gaston" />
 </template>
 
 <script>
