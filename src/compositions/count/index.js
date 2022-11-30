@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const count = {
   useCounter() {
@@ -10,6 +10,16 @@ const count = {
       count.value--;
     };
     return { count, increment, decrement };
+  },
+
+  userAutoCounter() {
+    const n = ref(0);
+    onMounted(() => {
+      window.setInterval(() => {
+        n.value++;
+      }, 1000);
+    });
+    return { n };
   },
 };
 
