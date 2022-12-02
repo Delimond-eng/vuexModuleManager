@@ -1,13 +1,19 @@
 <template>
     <div>
-        <p v-if="loading">Loading data...</p>
+        <p v-if="loading" class="text-center mt-5"> <span class="spinner-border spinner-border-sm"></span> Loading
+            data...</p>
         <div v-else>
-            <ul class="post-list">
-                <li class="post-item" v-for="post in posts" :key="post.id">
-                    <strong class="item-title">{{ post.title }}</strong><br>
-                    <p class="item-body">{{ post.body }}</p>
-                </li>
-            </ul>
+            <div class="row d-flex align-content-center justify-content-center">
+                <div class="col-md-3" v-for="post in posts" :key="post.id">
+                    <div class="card m-3" style="width: 18rem;">
+                        <img src="https://placebear.com/640/360" class="card-img-top" alt="placehoder image">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.body }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -24,27 +30,3 @@ export default {
     }
 }
 </script>
-
-<style>
-.post-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5px;
-    align-items: flex-start;
-    align-content: flex-start;
-    justify-items: flex-start;
-    justify-content: flex-start;
-
-}
-
-.post-item .item-title {
-    align-items: flex-start
-}
-
-.post-item .item-body {
-    align-items: flex-start;
-    align-content: flex-start;
-    justify-items: flex-start;
-    justify-content: flex-start
-}
-</style>

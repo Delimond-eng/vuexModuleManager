@@ -1,19 +1,13 @@
 <template>
-  <post-component />
+  <main-view />
 </template>
 
 <script>
-import AutoIncrement from './components/auto_increment_component'
-import HelloWorld from './components/HelloWorld.vue'
-import PostComponent from './components/posts_component.vue'
-
+import MainView from './view/index.vue'
 export default {
   name: 'App',
-
   components: {
-    AutoIncrement,
-    PostComponent,
-    HelloWorld
+    MainView
   }
 }
 </script>

@@ -1,6 +1,5 @@
 import { useStore } from "vuex";
 import { ref, onMounted } from "vue";
-import api from "@/api";
 
 const s = {
   usePost() {
