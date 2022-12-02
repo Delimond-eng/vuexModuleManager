@@ -1,19 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <auto-increment label="Hello Gaston" />
+  <post-component />
 </template>
 
 <script>
 import AutoIncrement from './components/auto_increment_component'
 import HelloWorld from './components/HelloWorld.vue'
+import PostComponent from './components/posts_component.vue'
 
 export default {
   name: 'App',
-  mounted() {
-    this.$store.dispatch('main/fetchPosts');
-  },
+
   components: {
     AutoIncrement,
+    PostComponent,
     HelloWorld
   }
 }
