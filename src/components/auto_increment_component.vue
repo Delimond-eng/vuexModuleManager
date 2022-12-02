@@ -1,8 +1,6 @@
 <template>
     <div>
-
         <p>Mon Label {{ label }}</p>
-
         <p>Classic counter</p>
         <h1>{{ counter.count }}</h1>
         <br>
