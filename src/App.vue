@@ -3,11 +3,18 @@
 </template>
 
 <script>
-import MainView from './view/index.vue'
+import MainView from '@/views'
+import { provide } from 'vue';
 export default {
   name: 'App',
   components: {
     MainView
+  },
+  setup(props) {
+    provide("logged-in", true);
+    provide("show-alert", (message) => {
+      alert(message);
+    });
   }
 }
 </script>
