@@ -11,7 +11,7 @@ export default {
     MainView
   },
   setup(props) {
-    provide("logged-in", true);
+    provide("logged-in", false);
     provide("show-alert", (message) => {
       alert(message);
     });
