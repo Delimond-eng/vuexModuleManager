@@ -94,10 +94,6 @@
                 <button type="button" class="btn btn-primary">Save changes</button>
             </template>
         </bs-modal>
-
-        <custom-toast title="Custom Toast" date="11 mins ago"
-            description="Hello, world! This is a notification message."
-            :icon="{ component: 'notifications', color: 'white' }" color="warning" />
     </div>
 </template>
 <script>

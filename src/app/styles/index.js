@@ -1,4 +1,3 @@
-import "@/assets/scss/material-dashboard.scss";
 import "expose-loader?exposes=$,jQuery!jquery";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
