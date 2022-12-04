@@ -1,10 +1,13 @@
-const showAlert = function (msg) {
-  alert(msg);
+/*trigger show bs modal*/
+const showBsModal = function (id) {
+  console.log("modal id:=>" + id);
+  $(`.${id}`).click();
 };
+/*end show bs modal*/
 
 export default {
   install: (app, options) => {
     /* Global config */
-    app.config.globalProperties.$showAlert = showAlert;
+    app.config.globalProperties.$showBsModal = showBsModal;
   },
 };

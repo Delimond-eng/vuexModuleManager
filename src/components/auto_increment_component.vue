@@ -31,8 +31,7 @@ export default {
             },
             auto: {
                 stopCounter, n,
-            },
-            props
+            }
         };
     }
 }
