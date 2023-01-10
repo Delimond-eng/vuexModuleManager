@@ -6,6 +6,10 @@ export default {
     };
   },
 
+  mounted() {
+    alert("extending components");
+  },
+
   methods: {
     increment() {
       this.count++;
