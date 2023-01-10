@@ -1,6 +1,9 @@
 <template>
     <div>
         <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary mt-5 me-2" @click="show">
+            showAlert
+        </button>
         <button type="button" class="btn btn-primary mt-5 me-2" @click="() => $showBsModal('modal-simple')">
             Launch demo modal simple
         </button>
