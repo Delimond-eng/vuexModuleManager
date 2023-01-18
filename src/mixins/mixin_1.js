@@ -1,7 +1,7 @@
 export default {
   methods: {
-    showMessage(msg) {
+    /*  showMessage(msg) {
       alert(msg);
-    },
+    }, */
   },
 };

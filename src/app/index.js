@@ -1,6 +1,7 @@
 import components from "./components";
 import globals from "./global";
 import styles from "./styles";
+import "@/utils";
 
 export default {
   install: (app, options) => {

@@ -7,7 +7,7 @@ export default {
   },
 
   mounted() {
-    alert("extending components");
+    /* alert("extending components"); */
   },
 
   methods: {
